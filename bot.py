@@ -174,7 +174,7 @@ async def addsub(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 # ================= MAIN =================
-if name == "__main__":
+if __name == "__main__":
     if not TOKEN:
         print("EROARE: TOKEN nu este setat!")
         exit()
@@ -188,3 +188,4 @@ if name == "__main__":
 
     print("Bot pornit...")
     app.run_polling()
+
