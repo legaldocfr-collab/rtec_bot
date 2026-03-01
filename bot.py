@@ -187,6 +187,10 @@ if __name__ == "__main__":
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 
     print("Bot pornit...")
-    app.run_polling()
+
+    import asyncio
+    asyncio.get_event_loop().run_until_complete(app.initialize())
+    asyncio.get_event_loop().run_until_complete(app.start())
+    asyncio.get_event_loop().run_forever()
 
 
