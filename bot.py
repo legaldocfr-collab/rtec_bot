@@ -174,11 +174,10 @@ async def addsub(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 # ================= MAIN =================
-
 if name == "__main__":
     if not TOKEN:
         print("EROARE: TOKEN nu este setat!")
-exit()
+        exit()
 
     app = ApplicationBuilder().token(TOKEN).build()
 
